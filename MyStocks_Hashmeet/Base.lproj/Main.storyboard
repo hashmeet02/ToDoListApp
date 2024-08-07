@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VGW-Li-eZy">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyStocks_Hashmeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-15"/>
+        </scene>
+        <!--My Stocks-->
+        <scene sceneID="1VP-Ik-51L">
+            <objects>
+                <tableViewController storyboardIdentifier="HomeViewController" id="oCO-2E-OIQ" customClass="HomeTableViewController" customModule="MyStocks_Hashmeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" springLoaded="YES" id="jix-pC-Jaw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="StockCell" textLabel="ykC-TC-MrR" detailTextLabel="Y2Z-EO-Lsg" imageView="xc2-nl-NTQ" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="KoR-6v-b5M">
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KoR-6v-b5M" id="Hsr-it-r76">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ykC-TC-MrR">
+                                            <rect key="frame" x="59" y="14" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y2Z-EO-Lsg">
+                                            <rect key="frame" x="59" y="30.333333333333332" width="32.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="snow" catalog="system" id="xc2-nl-NTQ">
+                                            <rect key="frame" x="23.166666666666668" y="20.333333333333332" width="17.666666666666664" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="cold"/>
+                                <connections>
+                                    <segue destination="VVx-15-HJU" kind="show" identifier="goToEditStock" id="4H9-sc-48J"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oCO-2E-OIQ" id="EbA-k7-MGf"/>
+                            <outlet property="delegate" destination="oCO-2E-OIQ" id="3Ih-M5-JgI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Stocks" id="hv4-Wd-4g5">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="t3p-Jl-iL0">
+                            <connections>
+                                <action selector="addStockTapped:" destination="oCO-2E-OIQ" id="lqD-Ng-YEK"/>
+                                <segue destination="dH7-Xa-fCh" kind="show" id="mLo-WX-fde"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DcM-KJ-Uyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="655"/>
+        </scene>
+        <!--Stock Details-->
+        <scene sceneID="dKw-w2-1tN">
+            <objects>
+                <tableViewController id="VVx-15-HJU" customClass="EditStockTableViewController" customModule="MyStocks_Hashmeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="buz-MN-Tbi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <activityIndicatorView key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="lbf-fu-aU8">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <slider key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="jZJ-Ff-E4W">
+                            <rect key="frame" x="0.0" y="535.66666984558105" width="393" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageReference key="minimumValueImage" image="thermometer.low" catalog="system" symbolScale="large"/>
+                            <imageReference key="maximumValueImage" image="flame" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                <hierarchicalColors>
+                                    <color systemColor="systemRedColor"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                        </slider>
+                        <sections>
+                            <tableViewSection headerTitle="Name" id="6FG-YT-c6x">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RTc-pA-aRU">
+                                        <rect key="frame" x="0.0" y="75.333332061767578" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RTc-pA-aRU" id="kDa-Xa-gJV">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Low Price" id="293-aQ-nHD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nMw-uu-w2S">
+                                        <rect key="frame" x="0.0" y="174.99999809265137" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nMw-uu-w2S" id="NEx-U2-kwz">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="High Price" id="E0c-RL-qy5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0Ou-SQ-2ha">
+                                        <rect key="frame" x="0.0" y="274.66666603088379" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Ou-SQ-2ha" id="lD2-UX-ZBO">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Last Price" id="c0s-JY-1SZ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vL2-Ob-wqp">
+                                        <rect key="frame" x="0.0" y="374.33333396911621" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vL2-Ob-wqp" id="Yxq-CV-RV3">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="% Net Change" id="UwQ-Hq-wVW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gzh-lS-g1a">
+                                        <rect key="frame" x="0.0" y="474.00000190734863" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gzh-lS-g1a" id="DLd-Lk-Cdn">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="VVx-15-HJU" id="uOi-D3-3mK"/>
+                            <outlet property="delegate" destination="VVx-15-HJU" id="UCG-5G-xeP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Stock Details" id="wJv-N2-aRK">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" systemItem="save" id="D5C-MB-SFj">
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="VVx-15-HJU" id="E9o-xQ-rgi"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="3SI-h0-VVr">
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="VVx-15-HJU" id="Irs-do-iDt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lbf-fu-aU8" id="sg2-y8-Vu5"/>
+                        <outlet property="highPriceRow" destination="0Ou-SQ-2ha" id="jgv-5n-vx9"/>
+                        <outlet property="lastPriceRow" destination="vL2-Ob-wqp" id="smX-eK-PI5"/>
+                        <outlet property="lowPriceRow" destination="nMw-uu-w2S" id="7Oi-3C-ATr"/>
+                        <outlet property="nameRow" destination="RTc-pA-aRU" id="wlG-ev-A0X"/>
+                        <outlet property="perNetChangeRow" destination="Gzh-lS-g1a" id="qQg-98-24e"/>
+                        <outlet property="temperatureSlider" destination="jZJ-Ff-E4W" id="Ve1-FH-XLI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmP-hX-R1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916.7938931297708" y="922.53521126760563"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="mgK-6d-cle">
+            <objects>
+                <viewController id="dH7-Xa-fCh" customClass="AddViewController" customModule="MyStocks_Hashmeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3v5-yC-n2x">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l7e-vA-jNU">
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexColor" name="cold"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StockCell" textLabel="PEw-Pq-Dw0" detailTextLabel="eID-9h-djs" style="IBUITableViewCellStyleValue1" id="ShT-kH-Bk1">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ShT-kH-Bk1" id="VSQ-sO-8cW">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PEw-Pq-Dw0">
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eID-9h-djs">
+                                                    <rect key="frame" x="340.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" barStyle="black" placeholder="Stock Name" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-40-bbo">
+                                <rect key="frame" x="16" y="103" width="361" height="56"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dH7-Xa-fCh" id="bcf-Rg-UFc"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zII-lK-bGl"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l7e-vA-jNU" firstAttribute="trailing" secondItem="zII-lK-bGl" secondAttribute="trailing" id="7WG-OE-f3J"/>
+                            <constraint firstItem="l7e-vA-jNU" firstAttribute="leading" secondItem="zII-lK-bGl" secondAttribute="leading" id="DR8-Gd-cDD"/>
+                            <constraint firstItem="l7e-vA-jNU" firstAttribute="top" secondItem="1qm-40-bbo" secondAttribute="bottom" id="HQT-yQ-s46"/>
+                            <constraint firstItem="zII-lK-bGl" firstAttribute="trailing" secondItem="1qm-40-bbo" secondAttribute="trailing" constant="16" id="TpO-YL-aWq"/>
+                            <constraint firstItem="1qm-40-bbo" firstAttribute="top" secondItem="zII-lK-bGl" secondAttribute="top" id="ema-qH-gZE"/>
+                            <constraint firstItem="l7e-vA-jNU" firstAttribute="bottom" secondItem="zII-lK-bGl" secondAttribute="bottom" id="iMt-lX-M3G"/>
+                            <constraint firstItem="1qm-40-bbo" firstAttribute="leading" secondItem="zII-lK-bGl" secondAttribute="leading" constant="16" id="ucG-NQ-Zu0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bvw-eh-oya"/>
+                    <connections>
+                        <outlet property="searchBar" destination="1qm-40-bbo" id="g6T-pw-hYG"/>
+                        <outlet property="tableView" destination="l7e-vA-jNU" id="mO4-hU-L7A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kvi-CN-5k9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="227"/>
+        </scene>
+        <!--My Stocks-->
+        <scene sceneID="6WM-Rr-yjH">
+            <objects>
+                <navigationController title="My Stocks" id="VGW-Li-eZy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b9s-JR-EPb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oCO-2E-OIQ" kind="relationship" relationship="rootViewController" id="wAN-Sc-eVE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsh-bb-Z8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flame" catalog="system" width="106" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="snow" catalog="system" width="119" height="128"/>
+        <image name="thermometer.low" catalog="system" width="80" height="128"/>
+        <namedColor name="cold">
+            <color red="0.62400001287460327" green="0.81699997186660767" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
